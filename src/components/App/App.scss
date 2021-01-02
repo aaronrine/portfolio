@@ -24,11 +24,38 @@
   main {
     background: gold;
     grid-area: main;
-    padding: 0.5rem;
+    padding: 1rem 3rem;
+    display: flex;
+    flex-direction: column;
+    & > * + * {
+      margin-top: 1rem;
+    }
+    .projects {
+      display: grid;
+      grid-template-areas: "projects projects projects" " card card card";
+      gap: 2rem;
+      h3 {
+        grid-area: projects;
+      }
+    }
   }
   footer {
     grid-area: footer;
     background: cornflowerblue;
     padding: 0.5rem;
+  }
+}
+
+.ProjectCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > * + * {
+    margin-top: 1rem;
+  }
+  padding: 0.5rem;
+  // max-width: max-content;
+  img {
+    height: 83px;
   }
 }
