@@ -1,4 +1,4 @@
-import todoAppScreenshot from "../../assets/todo-app.png";
+import todoAppScreenshot from "../../assets/todo-app-phone-cropped.png";
 
 export function getData() {
   const data = {
