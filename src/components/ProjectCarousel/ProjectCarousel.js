@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-
+import "./ProjectCarousel.scss";
 export function ProjectCarousel({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const project = projects[activeIndex];
@@ -23,11 +23,11 @@ export function ProjectCarousel({ projects }) {
   return (
     <section className="ProjectCarousel">
       <button type="button" onClick={() => previous()}>
-        prev
+        &lt;
       </button>
       <ProjectCard {...project} key={project.name} />
       <button type="button" onClick={() => next()}>
-        next
+        &gt;
       </button>
     </section>
   );
