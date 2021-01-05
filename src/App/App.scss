@@ -14,13 +14,7 @@
     align-items: center;
     background: chocolate;
   }
-  nav {
-    background: green;
-    grid-area: nav;
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem;
-  }
+ 
   footer {
     grid-area: footer;
     background: cornflowerblue;

@@ -25,11 +25,15 @@ function ProjectDetails() {
   );
 }
 
+function PageMissing() {
+  return <div>error 404</div>;
+}
+
 const routes = [
   { path: "/", component: Home },
   { path: "/home", component: Home },
   { path: "/projectdetails", component: ProjectDetails },
-  { path: "*", component: Home },
+  { path: "*", component: PageMissing },
 ];
 function App() {
   return (

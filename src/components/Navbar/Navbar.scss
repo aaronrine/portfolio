@@ -1,0 +1,24 @@
+@import "../../colors";
+.Navbar {
+  background: $blue-gray;
+  grid-area: nav;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  .NavItem {
+    margin-top: 1rem;
+    a {
+      text-decoration: none;
+      background: $muted-cobalt;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      color: $blue-gray;
+      &:hover {
+        background: $light-blue-gray;
+      }
+    }
+  }
+  .NavItem + .NavItem {
+    margin-top: 3rem;
+  }
+}

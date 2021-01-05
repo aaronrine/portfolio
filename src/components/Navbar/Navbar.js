@@ -1,3 +1,4 @@
+import "./Navbar.scss";
 export function Navbar({ navItems }) {
   return (
     <nav className="Navbar">
@@ -8,10 +9,10 @@ export function Navbar({ navItems }) {
   );
 }
 
-function NavItem({ name, submenu, uuid }) {
+function NavItem({ name, submenu, uuid, href }) {
   return (
     <div className="NavItem">
-      {name}
+      <a href={href}>{name}</a>
       {submenu && <Navbar navItems={submenu} key={uuid} />}
     </div>
   );
