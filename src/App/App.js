@@ -1,34 +1,7 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Footer, getNavItems, Header, Main, Navbar } from "../components";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Footer, getNavItems, Header, Home, Navbar } from "../components";
+
 import "./App.scss";
-
-function Carousel() {
-  return <div className="Carousel">carousel</div>;
-}
-
-function Home() {
-  return (
-    <main className="Home">
-      <section className="bio">
-        <div>
-          <img alt="A photo of Aaron Rine" />
-          <p>short quote</p>
-        </div>
-        <p>intro w/ skills</p>
-        <p>mid w/ passion for web dev</p>
-        <p>conclusion w/ ways i add value</p>
-      </section>
-      <section className="carousel">
-        <Carousel />
-      </section>
-      <section className="contact">
-        <p>contact</p>
-        <a href="https://github.com/aaronrine/">Github</a>
-        <a href="https://www.linkedin.com/in/aaron-rine-1903b511a/">LinkedIn</a>
-      </section>
-    </main>
-  );
-}
 
 function ProjectDetails() {
   return (
@@ -44,7 +17,10 @@ function ProjectDetails() {
         <p>What I disliked</p>
         <a href="https://github.com/aaronrine/todo-list">git demo</a>
       </section>
-      <aside></aside>
+      <aside>
+        <img alt="mobile" />
+        <img alt="desktop" />
+      </aside>
     </main>
   );
 }
@@ -53,7 +29,7 @@ const routes = [
   { path: "/", component: Home },
   { path: "/home", component: Home },
   { path: "/projectdetails", component: ProjectDetails },
-  { path: "*", component: Main },
+  { path: "*", component: Home },
 ];
 function App() {
   return (
