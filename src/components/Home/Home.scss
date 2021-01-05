@@ -13,13 +13,17 @@
     flex-direction: column;
     align-items: center;
     .bioCard {
-      display: flex;
-      justify-content: center;
-      align-items: center;
       margin-bottom: 2rem;
       img {
+        float: left;
+        width: 100px;
         height: 100px;
-        clip-path: circle(40%);
+        border-radius: 50%;
+        padding: 0.2rem;
+        shape-outside: circle(50%);
+      }
+      p {
+        text-align: justify;
       }
     }
     .bioText {
