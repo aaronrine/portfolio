@@ -4,29 +4,41 @@ import "./ProjectCarousel.scss";
 export function ProjectCarousel({ projects }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const project = projects[activeIndex];
+  const nextProject = projects[getNextIndex()];
+  const prevProject = projects[getPrevIndex()];
+
+  function getPrevIndex() {
+    return activeIndex == 0 ? projects.length - 1 : activeIndex - 1;
+  }
+
+  function getNextIndex() {
+    return activeIndex == projects.length - 1 ? 0 : activeIndex + 1;
+  }
 
   function previous() {
-    if (activeIndex == 0) {
-      setActiveIndex(projects.length - 1);
-    } else {
-      setActiveIndex((prev) => prev - 1);
-    }
+    setActiveIndex(getPrevIndex());
   }
   function next() {
-    if (activeIndex == projects.length - 1) {
-      setActiveIndex(0);
-    } else {
-      setActiveIndex((prev) => prev + 1);
-    }
+    setActiveIndex(getNextIndex());
   }
 
   return (
     <section className="ProjectCarousel">
-      <button type="button" onClick={() => previous()}>
+      <button className="prev" type="button" onClick={() => previous()}>
         &lt;
       </button>
-      <ProjectCard {...project} key={project.name} />
-      <button type="button" onClick={() => next()}>
+      <ProjectCard
+        project={prevProject}
+        classes="prev"
+        key={prevProject.name}
+      />
+      <ProjectCard project={project} active={true} key={project.name} />
+      <ProjectCard
+        project={nextProject}
+        classes="next"
+        key={nextProject.name}
+      />
+      <button className="next" type="button" onClick={() => next()}>
         &gt;
       </button>
     </section>

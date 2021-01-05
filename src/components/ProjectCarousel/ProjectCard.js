@@ -1,9 +1,12 @@
-export function ProjectCard({ name, thumb, alt, desc }) {
+import ProjectCarousel from "./ProjectCarousel";
+
+export function ProjectCard({ active = false, classes = "", project }) {
+  const { name, thumb, alt, desc } = project;
   return (
-    <div className="ProjectCard">
-      <h4>{name}</h4>
+    <div className={`ProjectCard ${active ? "active" : ""} ${classes}`}>
+      {active && <h4>{name}</h4>}
       <img alt={alt} src={thumb} />
-      <p>{desc}</p>
+      {active && <p>{desc}</p>}
     </div>
   );
 }

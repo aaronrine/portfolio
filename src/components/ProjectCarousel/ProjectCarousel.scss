@@ -1,9 +1,16 @@
+// TODO: add animations, curve project cards into a cylinder
+
 .ProjectCarousel {
-  background: black;
+  position: relative;
+  background: #313639;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: max-content;
   color: white;
   button {
+    position: absolute;
+    height: 100%;
     color: white;
     font-size: 2rem;
     padding: 0 0.5rem;
@@ -12,12 +19,22 @@
     background: none;
     cursor: pointer;
     &:hover {
-      background: silver;
-      color: black;
+      background: white;
+      color: dodgerblue;
+    }
+    &.prev {
+      left: 1.5rem;
+      left: 0;
+      z-index: 10;
+    }
+    &.next {
+      right: 1.5rem;
+      right: 0;
     }
   }
   .ProjectCard {
     display: flex;
+    opacity: 0.6;
     flex-direction: column;
     align-items: center;
     & > * + * {
@@ -25,7 +42,19 @@
     }
     padding: 0.5rem;
     img {
-      height: 200px;
+      height: 100px;
+    }
+    &.active {
+      opacity: 1;
+      img {
+        height: 200px;
+      }
+    }
+    &.prev {
+      padding-left: 2rem;
+    }
+    &.next {
+      padding-right: 2rem;
     }
   }
 }

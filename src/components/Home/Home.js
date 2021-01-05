@@ -2,7 +2,6 @@ import { ProjectCarousel } from "../ProjectCarousel";
 import { getData } from "./getData";
 export function Home() {
   const data = getData();
-  console.log(data);
   return (
     <main className="Home">
       <section className="bio">
