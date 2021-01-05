@@ -10,10 +10,10 @@ export function getData() {
         desc: "List and track the status of your tasks.",
       },
       {
-        name: "Todo-App2",
+        name: "Wordpress Website",
         thumb: todoAppScreenshot,
-        alt: "Todo app screenshot",
-        desc: "List and track the status of your tasks.",
+        alt: "Wordpress website screenshot",
+        desc: "E-commerce site selling fabric products.",
       },
       {
         name: "Todo-App3",
