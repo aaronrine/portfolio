@@ -27,7 +27,8 @@
 
   footer {
     grid-area: footer;
-    background: cornflowerblue;
+    background: $blue-gray;
+    color: $blueWhite;
     padding: 0.5rem;
   }
 }

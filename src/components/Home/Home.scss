@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 40em;
     .bioCard {
       margin-bottom: 2rem;
       img {
@@ -30,8 +31,10 @@
       display: flex;
       justify-content: space-evenly;
       margin-bottom: 2rem;
+      width: 100%;
       p {
-        width: 30%;
+        text-align: justify;
+        width: 15em;
       }
     }
   }
@@ -46,9 +49,10 @@
       background: $muted-cobalt;
       padding: 0.5rem 1rem;
       border-radius: 0.5rem;
-      color: $blue-gray;
+      color: $blueWhite;
       &:hover {
         background: $light-blue-gray;
+        color: $blue-gray;
       }
     }
   }
