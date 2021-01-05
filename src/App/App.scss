@@ -21,24 +21,6 @@
     flex-direction: column;
     padding: 0.5rem;
   }
-  main {
-    background: gold;
-    grid-area: main;
-    padding: 1rem 3rem;
-    display: flex;
-    flex-direction: column;
-    & > * + * {
-      margin-top: 1rem;
-    }
-    .projects {
-      display: grid;
-      grid-template-areas: "projects projects projects" " card card card";
-      gap: 2rem;
-      h3 {
-        grid-area: projects;
-      }
-    }
-  }
   footer {
     grid-area: footer;
     background: cornflowerblue;
