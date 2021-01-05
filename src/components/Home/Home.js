@@ -1,12 +1,14 @@
 import { ProjectCarousel } from "../ProjectCarousel";
 import { getData } from "./getData";
+import profile from "../../assets/irlProfile-cropped.jpg";
+import "./Home.scss";
 export function Home() {
   const data = getData();
   return (
     <main className="Home">
       <section className="bio">
         <div>
-          <img alt="A photo of Aaron Rine" />
+          <img src={profile} alt="A photo of Aaron Rine" />
           <p>short quote</p>
         </div>
         <p>intro w/ skills</p>
