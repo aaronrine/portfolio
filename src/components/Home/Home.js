@@ -39,7 +39,6 @@ export function Home() {
       </section>
       <ProjectCarousel projects={data.projects} />
       <section className="contact">
-        <p>contact</p>
         <a href="https://github.com/aaronrine/">Github</a>
         <a href="https://www.linkedin.com/in/aaron-rine-1903b511a/">LinkedIn</a>
       </section>

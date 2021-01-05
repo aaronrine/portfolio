@@ -1,18 +1,19 @@
 // TODO: add animations, curve project cards into a cylinder
+@import "../../colors";
 
 .ProjectCarousel {
   position: relative;
-  background: #313639;
+  background: $light-blue-gray;
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
-  color: white;
+  color: $blue-gray;
   margin-bottom: 2rem;
   button {
     position: absolute;
     height: 100%;
-    color: white;
+    color: $blue-gray;
     font-size: 2rem;
     padding: 0 0.5rem;
     border: none;
@@ -20,8 +21,8 @@
     background: none;
     cursor: pointer;
     &:hover {
-      background: white;
-      color: dodgerblue;
+      background: $sea-blue;
+      color: $blueWhite;
     }
     &.prev {
       left: 1.5rem;

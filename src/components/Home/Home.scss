@@ -36,9 +36,16 @@
     margin: 2rem 0;
     display: flex;
     justify-content: space-around;
+    align-items: center;
     a {
       text-decoration: none;
+      background: $muted-cobalt;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
       color: $blue-gray;
+      &:hover {
+        background: $light-blue-gray;
+      }
     }
   }
 }

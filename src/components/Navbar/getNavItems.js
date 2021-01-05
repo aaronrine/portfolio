@@ -10,12 +10,12 @@ function assignUuid(item) {
 export function getNavItems() {
   const navItems = [
     {
-      name: "Who I am",
-      href: "aboutme",
+      name: "Github",
+      href: "https://github.com/aaronrine/",
     },
     {
-      name: "My Work",
-      href: "projects",
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/aaron-rine-1903b511a/",
     },
   ];
   navItems.forEach((item) => assignUuid(item));
