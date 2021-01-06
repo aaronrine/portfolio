@@ -1,26 +1,28 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Footer, getNavItems, Header, Home, Navbar } from "../components";
-
+import { getData } from "../components/Home/getData";
 import "./App.scss";
 
-function ProjectDetails() {
+function ProjectDetails({ project }) {
+  if (!project) return null;
   return (
     <main className="ProjectDetails">
       <section>
-        <p>problem to solve, approuch to problem, solution</p>
+        <p>{project.desc}</p>
         <ul>
-          <li>tech</li>
-          <li>stack</li>
+          {project.tech.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
         </ul>
-        <p>What I learned</p>
-        <p>What I liked</p>
-        <p>What I disliked</p>
-        <a href="https://github.com/aaronrine/todo-list">git demo</a>
+        <p>{project.learned}</p>
+        <p>{project.liked}</p>
+        <p>{project.disliked}</p>
+        <a href={project.gitDemoLink}>git demo</a>
       </section>
-      <aside>
+      <section>
         <img alt="mobile" />
         <img alt="desktop" />
-      </aside>
+      </section>
     </main>
   );
 }
@@ -30,11 +32,20 @@ function PageMissing() {
 }
 
 const routes = [
-  { path: "/", component: Home },
-  { path: "/home", component: Home },
-  { path: "/projectdetails", component: ProjectDetails },
+  { exact: true, path: "/", component: Home },
+
+  {
+    path: "/projectDetails/:uuid",
+    render: (routeProps) => {
+      let uuid = routeProps.match.params.uuid;
+      let projects = getData().projects;
+      const project = projects.find((item) => item.uuid === uuid);
+      return <ProjectDetails project={project} />;
+    },
+  },
   { path: "*", component: PageMissing },
 ];
+
 function App() {
   return (
     <Router>
@@ -42,8 +53,14 @@ function App() {
         <Header />
         <Navbar navItems={getNavItems()} />
         <Switch>
-          {routes.map((route) => (
-            <Route exact {...{ ...route }} />
+          {routes.map((route, idx) => (
+            <Route
+              exact={route.exact}
+              path={route.path}
+              component={route.component ? route.component : null}
+              render={route.render ? route.render : null}
+              key={idx}
+            />
           ))}
         </Switch>
         <Footer />

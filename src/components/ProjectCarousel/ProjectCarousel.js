@@ -8,11 +8,11 @@ export function ProjectCarousel({ projects }) {
   const prevProject = projects[getPrevIndex()];
 
   function getPrevIndex() {
-    return activeIndex == 0 ? projects.length - 1 : activeIndex - 1;
+    return activeIndex === 0 ? projects.length - 1 : activeIndex - 1;
   }
 
   function getNextIndex() {
-    return activeIndex == projects.length - 1 ? 0 : activeIndex + 1;
+    return activeIndex === projects.length - 1 ? 0 : activeIndex + 1;
   }
 
   function previous() {

@@ -8,7 +8,7 @@ export function Home() {
     <main className="Home">
       <section className="bio">
         <div className="bioCard">
-          <img src={profile} alt="A photo of Aaron Rine" />
+          <img src={profile} alt="Aaron Rine" />
           <p>
             Websites hold a tremoundous amount of power and it is my ambition to
             join the larger community of web developers in helping to give this

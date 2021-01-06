@@ -14,8 +14,12 @@
     flex-direction: column;
     align-items: flex-start;
     background: $light-blue-gray;
-    h1 {
-      font-size: 3rem;
+    .Link {
+      text-decoration: none;
+      color: black;
+      h1 {
+        font-size: 3rem;
+      }
     }
     h4 {
       color: $blue-gray;
