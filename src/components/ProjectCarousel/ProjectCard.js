@@ -6,7 +6,7 @@ export function ProjectCard({ active = false, classes = "", project }) {
       <Link to={"/projectDetails/" + project.uuid}>
         <img alt={project.alt} src={project.thumb} />
       </Link>
-      {active && <p>{project.desc}</p>}
+      {active && <p>{project.shortDesc}</p>}
     </div>
   );
 }

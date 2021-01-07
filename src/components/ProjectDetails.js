@@ -14,11 +14,12 @@ export function ProjectDetails({ project }) {
         <p>{project.learned}</p>
         <p>{project.liked}</p>
         <p>{project.disliked}</p>
-        <a href={project.gitDemoLink}>git demo</a>
+        <a href={project.gitDemoLink}>See it live here</a>
       </section>
       <section className="media">
-        <img alt="mobile" />
-        <img alt="desktop" />
+        {project.images.map((image) => (
+          <img alt={image.alt} src={image.source} />
+        ))}
       </section>
     </main>
   );
