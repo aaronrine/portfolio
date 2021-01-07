@@ -5,6 +5,8 @@ export function getData() {
       {
         name: "Todo-App",
         thumb: todoAppScreenshot,
+        mobileImg: "",
+        desktopImg: "",
         alt: "Todo app screenshot",
         desc: "List and track the status of your tasks.",
         tech: ["html", "css", "js"],
@@ -17,6 +19,8 @@ export function getData() {
       {
         name: "Wordpress Website",
         thumb: todoAppScreenshot,
+        mobileImg: "",
+        desktopImg: "",
         alt: "Wordpress website screenshot",
         desc: "E-commerce site selling fabric products.",
         tech: ["html", "css", "js"],
@@ -29,6 +33,8 @@ export function getData() {
       {
         name: "Todo-App3",
         thumb: todoAppScreenshot,
+        mobileImg: "",
+        desktopImg: "",
         alt: "Todo app screenshot",
         desc: "List and track the status of your tasks.",
         tech: ["html", "css", "js"],
@@ -41,6 +47,8 @@ export function getData() {
       {
         name: "Todo-App4",
         thumb: todoAppScreenshot,
+        mobileImg: "",
+        desktopImg: "",
         alt: "Todo app screenshot",
         desc: "List and track the status of your tasks.",
         tech: ["html", "css", "js"],

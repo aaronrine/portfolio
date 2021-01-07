@@ -1,31 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Footer, getNavItems, Header, Home, Navbar } from "../components";
+import {
+  Footer,
+  getNavItems,
+  Header,
+  Home,
+  Navbar,
+  ProjectDetails,
+} from "../components";
 import { getData } from "../components/Home/getData";
 import "./App.scss";
-
-function ProjectDetails({ project }) {
-  if (!project) return null;
-  return (
-    <main className="ProjectDetails">
-      <section>
-        <p>{project.desc}</p>
-        <ul>
-          {project.tech.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-        </ul>
-        <p>{project.learned}</p>
-        <p>{project.liked}</p>
-        <p>{project.disliked}</p>
-        <a href={project.gitDemoLink}>git demo</a>
-      </section>
-      <section>
-        <img alt="mobile" />
-        <img alt="desktop" />
-      </section>
-    </main>
-  );
-}
 
 function PageMissing() {
   return <div>error 404</div>;
