@@ -1,3 +1,24 @@
+import { Carousel } from "..";
+import "./ProjectDetails.scss";
+function MediaCard({ item }) {
+  return <img alt={item.alt} src={item.source} key={item.alt} />;
+}
+
+function MediaCarousel({ media }) {
+  return (
+    <Carousel
+      items={media}
+      classes="MediaCarousel"
+      ItemCard={MediaCard}
+      itemProps={{
+        previous: { classes: "prev" },
+        current: { active: true },
+        next: { classes: "next" },
+      }}
+    />
+  );
+}
+
 export function ProjectDetails({ project }) {
   if (!project) return null;
   return (
@@ -17,9 +38,7 @@ export function ProjectDetails({ project }) {
         <a href={project.gitDemoLink}>See it live here</a>
       </section>
       <section className="media">
-        {project.images.map((image) => (
-          <img alt={image.alt} src={image.source} key={image.alt} />
-        ))}
+        <MediaCarousel media={project.images} />
       </section>
     </main>
   );
