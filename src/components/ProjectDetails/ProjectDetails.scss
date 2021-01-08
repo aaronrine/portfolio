@@ -89,11 +89,13 @@
       padding: 1rem;
       img {
         height: 200px;
+        // max-width: auto;
       }
       &.active {
         opacity: 1;
         img {
-          height: 200px;
+          height: auto;
+          max-width: 450px;
           margin: 0 2rem;
         }
       }
