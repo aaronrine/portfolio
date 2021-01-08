@@ -18,7 +18,7 @@ export function ProjectDetails({ project }) {
       </section>
       <section className="media">
         {project.images.map((image) => (
-          <img alt={image.alt} src={image.source} />
+          <img alt={image.alt} src={image.source} key={image.alt} />
         ))}
       </section>
     </main>

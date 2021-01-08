@@ -23,6 +23,7 @@ const routes = [
       let uuid = routeProps.match.params.uuid;
       let projects = getData().projects;
       const project = projects.find((item) => item.uuid === uuid);
+
       return <ProjectDetails project={project} />;
     },
   },
