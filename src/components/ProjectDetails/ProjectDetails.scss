@@ -1,4 +1,6 @@
+@import "../../colors";
 .ProjectDetails {
+  background: $blueWhite;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 2rem auto auto;
@@ -47,22 +49,54 @@
     }
   }
 
-  .media {
+  .MediaCarousel {
     grid-row: 1/5;
     grid-column: 3;
+    border-left: solid black 1px;
+    position: relative;
+    background: $blueWhite;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     align-items: center;
-    border-left: solid black 1px;
-    img {
-      max-width: 400px;
+    justify-content: center;
+    color: $blue-gray;
+    width: max-content;
+    button {
+      position: absolute;
+      height: 100%;
+      color: $blue-gray;
+      font-size: 4rem;
+      padding: 0 0.5rem;
+      border: none;
+      outline: none;
+      background: none;
+      cursor: pointer;
+      &:hover {
+        background: $sea-blue;
+        color: $blueWhite;
+      }
+      &.prev {
+        left: 1.5rem;
+        left: 0;
+        z-index: 10;
+      }
+      &.next {
+        right: 1.5rem;
+        right: 0;
+      }
     }
-    img + img {
-      margin-top: 2rem;
-    }
-    :last-child {
-      margin-bottom: 1rem;
+    .MediaCard {
+      padding: 1rem;
+      img {
+        height: 200px;
+      }
+      &.active {
+        opacity: 1;
+        img {
+          height: 200px;
+          margin: 0 2rem;
+        }
+      }
     }
   }
 }

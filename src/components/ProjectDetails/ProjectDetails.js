@@ -1,7 +1,11 @@
 import { Carousel } from "..";
 import "./ProjectDetails.scss";
-function MediaCard({ item }) {
-  return <img alt={item.alt} src={item.source} key={item.alt} />;
+function MediaCard({ item, active = false, classes = "" }) {
+  return (
+    <div className={`MediaCard ${active ? "active" : ""} ${classes}`}>
+      <img alt={item.alt} src={item.source} key={item.alt} />
+    </div>
+  );
 }
 
 function MediaCarousel({ media }) {
@@ -37,9 +41,7 @@ export function ProjectDetails({ project }) {
         <p>{project.disliked}</p>
         <a href={project.gitDemoLink}>See it live here</a>
       </section>
-      <section className="media">
-        <MediaCarousel media={project.images} />
-      </section>
+      <MediaCarousel media={project.images} />
     </main>
   );
 }
