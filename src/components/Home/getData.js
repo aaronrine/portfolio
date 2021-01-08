@@ -1,10 +1,12 @@
 import todoAppScreenshot from "../../assets/todo-app-phone-cropped.png";
-import propocketCheckout from "../../assets/propocket-checkout.png";
-import propocketDesktopShop from "../../assets/propocket-desktop-shop.png";
-import propocketDesktop from "../../assets/propocket-desktop-cropped.png";
-import propocketPhoneShop from "../../assets/propocket-phone-shop.png";
+import transparentTodoAppScreenshot from "../../assets/transparent-todo-app-phone-cropped.png";
+import propocketCheckout from "../../assets/transparent-propocket-checkout.png";
+import propocketDesktopShop from "../../assets/transparent-propocket-desktop-shop.png";
+import propocketDesktop from "../../assets/transparent-propocket-desktop-cropped.png";
+import propocketPhoneShop from "../../assets/transparent-propocket-phone-shop.png";
 import propocketPhone from "../../assets/propocket-phone.png";
-import todoAppDesktop from "../../assets/todo-app-desktop.png";
+import transparentPropocketPhone from "../../assets/transparent-propocket-phone.png";
+import todoAppDesktop from "../../assets/transparent-todo-app-desktop.png";
 
 export function getData() {
   const data = {
@@ -21,7 +23,7 @@ export function getData() {
               "Desktop view of ToDo app. Three todos are in a row below a text field. One todo is marked complete.",
           },
           {
-            source: todoAppScreenshot,
+            source: transparentTodoAppScreenshot,
             alt:
               "Mobile view of ToDo app. Three todos are in a column beneath a text field. One todo is marked complete.",
           },
@@ -60,7 +62,7 @@ export function getData() {
               "Main shop of propocket.biz as seen on desktop. A row of four bags with their names and prices are shown alongside a grid of filter options",
           },
           {
-            source: propocketPhone,
+            source: transparentPropocketPhone,
             alt:
               "Landing screen of propocket.biz as seen on mobile. A single column of best sellers fills the bottom of the screen. The logo takes up the entire header and the navbar is collapsed into three lines.",
           },
