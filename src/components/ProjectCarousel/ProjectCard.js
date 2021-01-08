@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 export function ProjectCard({ active = false, classes = "", item }) {
-  console.log(item);
   return (
     <div className={`ProjectCard ${active ? "active" : ""} ${classes}`}>
       {active && <h4>{item.name}</h4>}
