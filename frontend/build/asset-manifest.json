@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ca5f9992.chunk.css",
+    "main.js": "/static/js/main.6295be0a.chunk.js",
+    "main.js.map": "/static/js/main.6295be0a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2fd7dc15.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2fd7dc15.js.map",
+    "static/js/2.c68e89f8.chunk.js": "/static/js/2.c68e89f8.chunk.js",
+    "static/js/2.c68e89f8.chunk.js.map": "/static/js/2.c68e89f8.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.ca5f9992.chunk.css.map": "/static/css/main.ca5f9992.chunk.css.map",
+    "static/js/2.c68e89f8.chunk.js.LICENSE.txt": "/static/js/2.c68e89f8.chunk.js.LICENSE.txt",
+    "static/media/irlProfile-cropped.e2708859.jpg": "/static/media/irlProfile-cropped.e2708859.jpg",
+    "static/media/propocket-phone.e9fcf942.png": "/static/media/propocket-phone.e9fcf942.png",
+    "static/media/todo-app-phone-cropped.e4a298e5.png": "/static/media/todo-app-phone-cropped.e4a298e5.png",
+    "static/media/transparent-propocket-checkout.275e9194.png": "/static/media/transparent-propocket-checkout.275e9194.png",
+    "static/media/transparent-propocket-desktop-cropped.c4b03970.png": "/static/media/transparent-propocket-desktop-cropped.c4b03970.png",
+    "static/media/transparent-propocket-desktop-shop.aa662995.png": "/static/media/transparent-propocket-desktop-shop.aa662995.png",
+    "static/media/transparent-propocket-phone-shop.62d595a6.png": "/static/media/transparent-propocket-phone-shop.62d595a6.png",
+    "static/media/transparent-propocket-phone.bb3f5383.png": "/static/media/transparent-propocket-phone.bb3f5383.png",
+    "static/media/transparent-todo-app-desktop.d3b93535.png": "/static/media/transparent-todo-app-desktop.d3b93535.png",
+    "static/media/transparent-todo-app-phone-cropped.a94f1151.png": "/static/media/transparent-todo-app-phone-cropped.a94f1151.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2fd7dc15.js",
+    "static/js/2.c68e89f8.chunk.js",
+    "static/css/main.ca5f9992.chunk.css",
+    "static/js/main.6295be0a.chunk.js"
+  ]
+}
