@@ -1,5 +1,4 @@
 import uuid from "react-uuid";
-
 function assignUuid(item) {
   item.uuid = uuid();
   if (item?.submenu) {
@@ -16,6 +15,10 @@ export function getNavItems() {
     {
       name: "LinkedIn",
       href: "https://www.linkedin.com/in/aaron-rine-1903b511a/",
+    },
+    {
+      name: "Resume",
+      href: "../../assets/resume-frontend.pdf",
     },
   ];
   navItems.forEach((item) => assignUuid(item));
