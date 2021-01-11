@@ -18,7 +18,7 @@ export function getNavItems() {
     },
     {
       name: "Resume",
-      href: "../../assets/resume-frontend.pdf",
+      href: "/resume/",
     },
   ];
   navItems.forEach((item) => assignUuid(item));
