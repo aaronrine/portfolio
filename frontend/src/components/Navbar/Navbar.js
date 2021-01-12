@@ -1,6 +1,7 @@
 import "./Navbar.scss";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export function Navbar({ navItems }) {
@@ -22,7 +23,9 @@ export function Navbar({ navItems }) {
 function NavItem({ name, submenu, uuid, href }) {
   return (
     <div className="NavItem">
-      <a href={href}>{name}</a>
+      <a href={href}>
+        <FontAwesomeIcon icon={name} />
+      </a>
       {submenu && <Navbar navItems={submenu} key={uuid} />}
     </div>
   );

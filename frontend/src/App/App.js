@@ -1,12 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import {
-  Footer,
-  getNavItems,
-  Header,
-  Home,
-  Navbar,
-  ProjectDetails,
-} from "../components";
+import { Footer, Header, Home, ProjectDetails } from "../components";
 import { getData } from "../components/Home/getData";
 import "./App.scss";
 
@@ -35,7 +28,6 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <Navbar navItems={getNavItems()} />
         <Switch>
           {routes.map((route, idx) => (
             <Route

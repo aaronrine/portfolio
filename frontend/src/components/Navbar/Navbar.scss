@@ -1,25 +1,33 @@
 @import "../../colors";
+
 .Navbar {
-  background: linear-gradient($blue-gray, $blueWhite);
-  grid-area: nav;
   display: flex;
-  flex-direction: column;
-  padding: 0.5rem;
-  .NavItem {
-    margin-top: 1rem;
-    a {
-      text-decoration: none;
-      background: $muted-cobalt;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      color: $blueWhite;
-      &:hover {
-        background: $light-blue-gray;
-        color: $blue-gray;
-      }
+  button {
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.5rem;
+    font-size: 2rem;
+    background-color: $blue-gray;
+    color: $blueWhite;
+    margin-right: 0.25rem;
+    &:hover {
+      background-color: $blueWhite;
+      color: $blue-gray;
     }
   }
-  .NavItem + .NavItem {
-    margin-top: 3rem;
+  .NavItem {
+    text-align: center;
+    a {
+      padding: 0.25rem 0.5rem;
+      text-decoration: none;
+      background-color: $blue-gray;
+      border-radius: 0.5rem;
+      color: $blueWhite;
+      font-size: 2rem;
+    }
+    & + .NavItem {
+      margin-left: 0.25rem;
+    }
   }
 }
