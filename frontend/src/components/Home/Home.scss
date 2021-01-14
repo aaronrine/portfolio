@@ -27,11 +27,15 @@
     }
     .bioText {
       display: flex;
+      flex-direction: column;
       justify-content: space-evenly;
       margin-bottom: 2rem;
       width: 100%;
       p {
         text-align: justify;
+        & + p {
+          margin-top: 1rem;
+        }
       }
     }
   }
