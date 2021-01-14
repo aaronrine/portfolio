@@ -7,7 +7,7 @@ export function Home() {
   return (
     <main className="Home">
       <section className="bio">
-        <div className="bioCard">
+        <article className="bioCard">
           <img src={profile} alt="Aaron Rine" />
           <p>
             Websites hold a tremendous amount of power and it is my ambition to
@@ -19,8 +19,8 @@ export function Home() {
             confident that I can find the solutions your company needs to go to
             the next level.
           </p>
-        </div>
-        <div className="bioText">
+        </article>
+        <article className="bioText">
           <p>
             Most of my experience lies in front-end development. Having an
             advanced grasp of HTML5, JavaScript, CSS and others allowed me to
@@ -33,9 +33,12 @@ export function Home() {
             person. While most of my work is my own, I am no stranger to working
             with friends and colleagues on coding projects and sharing repos.
           </p>
-        </div>
+        </article>
       </section>
-      <ProjectCarousel projects={data.projects} />
+      <section>
+        <h3>Projects</h3>
+        <ProjectCarousel projects={data.projects} />
+      </section>
     </main>
   );
 }
