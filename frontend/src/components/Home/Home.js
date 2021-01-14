@@ -10,7 +10,7 @@ export function Home() {
         <div className="bioCard">
           <img src={profile} alt="Aaron Rine" />
           <p>
-            Websites hold a tremoundous amount of power and it is my ambition to
+            Websites hold a tremendous amount of power and it is my ambition to
             join the larger community of web developers in helping to give this
             power to companies and individuals. Much of my ability to provide
             comes from being a quick learner, as most coding obstacles are
@@ -36,10 +36,6 @@ export function Home() {
         </div>
       </section>
       <ProjectCarousel projects={data.projects} />
-      <section className="contact">
-        <a href="https://github.com/aaronrine/">Github</a>
-        <a href="https://www.linkedin.com/in/aaron-rine-1903b511a/">LinkedIn</a>
-      </section>
     </main>
   );
 }

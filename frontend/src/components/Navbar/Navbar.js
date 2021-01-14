@@ -1,21 +1,14 @@
 import "./Navbar.scss";
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-import { faBars } from "@fortawesome/free-solid-svg-icons";
-
-export function Navbar({ navItems }) {
-  const [showMenu, setShowMenu] = useState(false);
+export function Navbar({ navItems, showMenu }) {
   return (
     <nav className="Navbar">
-      <button onClick={() => setShowMenu(!showMenu)}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-
-      {showMenu &&
-        navItems?.map((navItem) => {
-          return <NavItem {...navItem} key={navItem.uuid} />;
-        })}
+      <div className="navList">
+        {showMenu &&
+          navItems?.map((navItem) => {
+            return <NavItem {...navItem} key={navItem.uuid} />;
+          })}
+      </div>
     </nav>
   );
 }

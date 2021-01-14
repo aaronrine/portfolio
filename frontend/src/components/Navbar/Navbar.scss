@@ -1,33 +1,23 @@
 @import "../../colors";
 
 .Navbar {
-  display: flex;
-  button {
-    outline: none;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.1rem 0.5rem;
-    font-size: 2rem;
-    background-color: $blue-gray;
-    color: $blueWhite;
-    margin-right: 0.25rem;
-    &:hover {
-      background-color: $blueWhite;
-      color: $blue-gray;
-    }
-  }
-  .NavItem {
-    text-align: center;
-    a {
-      padding: 0.25rem 0.5rem;
-      text-decoration: none;
-      background-color: $blue-gray;
-      border-radius: 0.5rem;
-      color: $blueWhite;
-      font-size: 2rem;
-    }
-    & + .NavItem {
-      margin-left: 0.25rem;
+  .navList {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    .NavItem {
+      text-align: center;
+      a {
+        padding: 0.25rem 0.5rem;
+        text-decoration: none;
+        background-color: $blue-gray;
+        border-radius: 0.5rem;
+        color: $blueWhite;
+        font-size: 1.5rem;
+      }
+      & + .NavItem {
+        margin-left: 0.25rem;
+      }
     }
   }
 }
