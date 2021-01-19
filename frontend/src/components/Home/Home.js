@@ -35,7 +35,7 @@ export function Home() {
           </p>
         </article>
       </section>
-      <section>
+      <section className="projects">
         <h3>Projects</h3>
         <ProjectCarousel projects={data.projects} />
       </section>

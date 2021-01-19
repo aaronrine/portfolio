@@ -4,16 +4,11 @@ import "./ProjectCarousel.scss";
 
 export function ProjectCarousel({ projects }) {
   return (
-      <Carousel 
-        items={projects} 
-        classes="ProjectCarousel" 
-        ItemCard={ProjectCard}
-        itemProps = {{
-          previous: {classes: "prev"},
-          current: {active: true},
-          next: {classes: "next"}
-        }}
-      />
+    <Carousel
+      items={projects}
+      carouselClasses="ProjectCarousel"
+      ItemCard={ProjectCard}
+    />
   );
 }
 

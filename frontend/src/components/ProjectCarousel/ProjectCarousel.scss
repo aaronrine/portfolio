@@ -3,14 +3,14 @@
 
 .ProjectCarousel {
   position: relative;
-  background: $light-blue-gray;
   display: flex;
   align-items: center;
   justify-content: center;
   width: max-content;
   color: $blue-gray;
   margin-bottom: 2rem;
-  max-width: 100%;
+  width: 100%;
+
   button {
     position: absolute;
     height: 100%;
@@ -41,7 +41,7 @@
     flex-direction: column;
     align-items: center;
     p {
-      width: 18rem;
+      display: none;
     }
     & > * + * {
       margin-top: 1rem;
@@ -50,19 +50,16 @@
     img {
       height: 100px;
     }
-    &.active {
+    .active {
       opacity: 1;
-      img {
-        height: 200px;
-      }
+
+      height: 200px;
     }
     &.prev {
       padding-left: 2rem;
-      display: none;
     }
     &.next {
       padding-right: 2rem;
-      display: none;
     }
   }
 }

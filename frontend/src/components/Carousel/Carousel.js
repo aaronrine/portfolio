@@ -1,15 +1,19 @@
 import { useState } from "react";
+import "./Carousel.scss";
 
-function BtnCarousel({ onclick, classes = "", label = "" }) {
+function BtnCarousel({ onclick, btnClasses = "", label = "" }) {
   return (
-    <button className={classes} type="button" onClick={() => onclick()}>
+    <button className={btnClasses} type="button" onClick={() => onclick()}>
       {label}
     </button>
   );
 }
 
-export function Carousel({ items, classes = "", ItemCard, itemProps }) {
+export function Carousel({ items, carouselClasses = "", ItemCard }) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [innerComponentClasses, setInnerComponentClasses] = useState("");
+  const [leftAnimate, setLeftAnimate] = useState(0);
+  const [rightAnimate, setRightAnimate] = useState(0);
 
   function getPrevIndex() {
     return activeIndex === 0 ? items.length - 1 : activeIndex - 1;
@@ -20,18 +24,64 @@ export function Carousel({ items, classes = "", ItemCard, itemProps }) {
   }
   function setPreviousItem() {
     setActiveIndex(getPrevIndex());
+    setInnerComponentClasses("left");
   }
   function setNextItem() {
     setActiveIndex(getNextIndex());
+    setInnerComponentClasses("right");
   }
 
   return (
-    <section className={`Carousel ${classes}`}>
-      <BtnCarousel classes="prev" onclick={setPreviousItem} label="&lt;" />
-      <ItemCard item={items[getPrevIndex()]} {...{ ...itemProps.previous }} />
-      <ItemCard item={items[activeIndex]} {...{ ...itemProps.current }} />
-      <ItemCard item={items[getNextIndex()]} {...{ ...itemProps.next }} />
-      <BtnCarousel classes="next" onclick={setNextItem} label="&gt;" />
+    <section className={`Carousel ${carouselClasses}`}>
+      <BtnCarousel
+        btnClasses="prev"
+        onclick={() => {
+          setLeftAnimate(1);
+          setPreviousItem();
+        }}
+        label="&lt;"
+      />
+      <ItemCard
+        item={items[getPrevIndex()]}
+        classes={`prev ${innerComponentClasses}`}
+        onAnimationEnd={() => {
+          setLeftAnimate(0);
+          setRightAnimate(0);
+        }}
+        dataLeftAnimate={leftAnimate}
+        dataRightAnimate={rightAnimate}
+      />
+      <ItemCard
+        item={items[activeIndex]}
+        active={true}
+        classes={` ${innerComponentClasses}`}
+        onAnimationStart={() => console.log("started")}
+        onAnimationEnd={() => {
+          console.log("ended");
+          setLeftAnimate(0);
+          setRightAnimate(0);
+        }}
+        dataLeftAnimate={leftAnimate}
+        dataRightAnimate={rightAnimate}
+      />
+      <ItemCard
+        item={items[getNextIndex()]}
+        classes={`next ${innerComponentClasses}`}
+        onAnimationEnd={() => {
+          setLeftAnimate(0);
+          setRightAnimate(0);
+        }}
+        dataLeftAnimate={leftAnimate}
+        dataRightAnimate={rightAnimate}
+      />
+      <BtnCarousel
+        btnClasses="next"
+        onclick={() => {
+          setRightAnimate(1);
+          setNextItem();
+        }}
+        label="&gt;"
+      />
     </section>
   );
 }
