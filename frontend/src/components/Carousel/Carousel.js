@@ -57,7 +57,6 @@ export function Carousel({ items, carouselClasses = "", ItemCard }) {
         classes={` ${innerComponentClasses}`}
         onAnimationStart={() => console.log("started")}
         onAnimationEnd={() => {
-          console.log("ended");
           setLeftAnimate(0);
           setRightAnimate(0);
         }}
