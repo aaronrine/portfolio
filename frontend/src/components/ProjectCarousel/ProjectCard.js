@@ -8,6 +8,10 @@ export function ProjectCard({
   dataLeftAnimate,
   dataRightAnimate,
 }) {
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <div
       key={uuid()}
@@ -17,7 +21,7 @@ export function ProjectCard({
     >
       {active && <h4>{item.name}</h4>}
       <Link to={"/projectDetails/" + item.uuid}>
-        <img alt={item.alt} src={item.thumb} />
+        <img alt={item.alt} src={item.thumb} onClick={scrollToTop} />
       </Link>
       {active && <p>{item.shortDesc}</p>}
     </div>
