@@ -1,11 +1,12 @@
 .Carousel {
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 200px;
   img {
     -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left
-          bottom, from(transparent), to(rgba(250, 250, 250, 0.25)));
+          bottom, from(transparent), to(rgba(250, 250, 250, 0.5)));
   }
   .next {
     transform: rotateY(-45deg);
