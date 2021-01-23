@@ -1,13 +1,13 @@
 @import "../../colors";
 
 .Navbar {
-  background: $light-blue-gray;
+  background: $light-blue-gray-translucent;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateY(0);
   &.animateMenu {
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.25s ease-in-out;
   }
   &.showMenu {
     transform: translateY(68px);

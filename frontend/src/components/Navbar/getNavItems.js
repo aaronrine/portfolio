@@ -1,6 +1,6 @@
 import uuid from "react-uuid";
 import { faGithubSquare, faLinkedin } from "@fortawesome/free-brands-svg-icons";
-import { faAddressCard } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faHome } from "@fortawesome/free-solid-svg-icons";
 function assignUuid(item) {
   item.uuid = uuid();
   if (item?.submenu) {
@@ -10,6 +10,10 @@ function assignUuid(item) {
 
 export function getNavItems() {
   const navItems = [
+    {
+      name: faHome,
+      href: "/",
+    },
     {
       name: faGithubSquare,
       href: "https://github.com/aaronrine/",
