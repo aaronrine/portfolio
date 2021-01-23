@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { Footer, Header, Home, ProjectDetails } from "../components";
 import { getData } from "../components/Home/getData";
+import { Navbar, getNavItems } from "../components";
 import "./App.scss";
 
 function PageMissing() {
@@ -24,10 +26,17 @@ const routes = [
 ];
 
 function App() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Navbar navItems={getNavItems()} showMenu={showMenu} />
+        <Header
+          toggleShowMenu={() => {
+            console.log("click");
+            setShowMenu(!showMenu);
+          }}
+        />
         <Switch>
           {routes.map((route, idx) => (
             <Route

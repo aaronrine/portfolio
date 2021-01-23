@@ -2,12 +2,11 @@ import "./Navbar.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function Navbar({ navItems, showMenu }) {
   return (
-    <nav className="Navbar">
+    <nav className={`Navbar animateMenu ${showMenu ? "showMenu " : ""}`}>
       <div className="navList">
-        {showMenu &&
-          navItems?.map((navItem) => {
-            return <NavItem {...navItem} key={navItem.uuid} />;
-          })}
+        {navItems?.map((navItem) => {
+          return <NavItem {...navItem} key={navItem.uuid} />;
+        })}
       </div>
     </nav>
   );

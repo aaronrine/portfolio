@@ -1,10 +1,21 @@
 @import "../../colors";
 
 .Navbar {
+  background: $light-blue-gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(0);
+  &.animateMenu {
+    transition: transform 0.4s ease-in-out;
+  }
+  &.showMenu {
+    transform: translateY(68px);
+  }
   .navList {
     display: flex;
-    margin-bottom: 1rem;
-    margin-left: 2rem;
+    padding: 1rem;
+    position: relative;
     .NavItem {
       text-align: center;
       a {
