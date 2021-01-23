@@ -42,9 +42,9 @@ export function getData() {
         uuid: "103de1b-6c1e-c255-8784-fffaa2cdf4c",
       },
       {
-        name: "Wordpress Website",
+        name: "Propocket.biz",
         thumb: propocketPhone,
-        alt: "Wordpress website screenshot",
+        alt: "Propocket.biz screenshot",
         images: [
           {
             source: propocketCheckout,
@@ -91,7 +91,7 @@ export function getData() {
           "I enjoyed getting my feet wet in the world of web development and seeing a company use a website that I built.",
         disliked:
           "Intitially learning Paypal API was frustrating and took the better part of a week. I was learning what api's were at the same time that I was trying to implement one that also required some housekeeping.",
-        gitDemoLink: "",
+        gitDemoLink: "https://propocket.biz",
         uuid: "7bbfa28-1d6-5132-055-0edc1164e37",
       },
     ],
