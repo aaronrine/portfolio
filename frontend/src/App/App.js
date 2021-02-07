@@ -33,7 +33,6 @@ function App() {
         <Navbar navItems={getNavItems()} showMenu={showMenu} />
         <Header
           toggleShowMenu={() => {
-            console.log("click");
             setShowMenu(!showMenu);
           }}
         />
