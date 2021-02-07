@@ -31,6 +31,9 @@
         border-radius: 0.5rem;
         color: $blueWhite;
         font-size: 1.5rem;
+        @media (min-width: 768px) {
+          font-size: 2em;
+        }
       }
       & + .NavItem {
         margin-left: 0.25rem;
