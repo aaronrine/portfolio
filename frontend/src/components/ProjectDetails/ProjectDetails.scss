@@ -31,9 +31,15 @@
       grid-template-columns: repeat(auto-fill, 1fr);
       grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-auto-flow: column;
+      div {
+        @media (min-width: 992px) {
+          display: grid;
+          place-content: center;
+        }
+      }
       font-weight: bold;
       border: solid 1px $blue-gray;
-      li:nth-child(even) {
+      div:nth-child(even) {
         background: $light-blue-gray;
       }
     }

@@ -38,12 +38,18 @@
       font-size: 1em;
       font-weight: bold;
       padding: 0.35em 0.5em;
-      border: none;
+      border: solid 1px rgba(0, 0, 0, 0);
       border-radius: 0.5em;
       outline: none;
       background: $blue-gray;
+      cursor: pointer;
       @media (min-width: 768px) {
         font-size: 1.5em;
+      }
+      &:hover {
+        background: $blueWhite;
+        color: $blue-gray;
+        border: solid 1px $blue-gray;
       }
     }
   }

@@ -32,7 +32,9 @@ export function ProjectDetails({ project }) {
         <p className="desc">{project.desc}</p>
         <ul className="techDetails">
           {project.tech.map((item, idx) => (
-            <li key={item !== "" ? item : idx}>{item}</li>
+            <div>
+              <li key={item !== "" ? item : idx}>{item}</li>
+            </div>
           ))}
         </ul>
       </section>
