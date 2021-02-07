@@ -128,7 +128,7 @@ export default function Carousel({ carouselClasses = "", items, ItemCard }) {
     <div className={`Carousel ${carouselClasses}`}>
       <div className="container">
         <button className="carousel__prev" onClick={prevSlide}>
-          prev
+          Prev
         </button>
         <div className="wrapper">
           {transitions.map(({ item, props, key }) => (
@@ -138,7 +138,7 @@ export default function Carousel({ carouselClasses = "", items, ItemCard }) {
           ))}
         </div>
         <button className="carousel__next" onClick={nextSlide}>
-          next
+          Next
         </button>
       </div>
     </div>

@@ -5,6 +5,11 @@
   flex-direction: column;
   max-width: 100%;
   padding: 0 1rem;
+  margin-bottom: 1.8em;
+  @media (min-width: 768px) {
+    font-size: 1.5em;
+  }
+
   h4 {
     margin-top: 0.5rem;
     color: $blue-gray;
@@ -17,7 +22,10 @@
     .desc {
     }
     .techDetails {
-      margin-top: 1rem;
+      margin-top: 1em;
+      @media (min-width: 768px) {
+        margin-top: 2em;
+      }
       list-style-type: none;
       display: grid;
       grid-template-columns: repeat(auto-fill, 1fr);
@@ -31,16 +39,31 @@
     }
   }
   .personalDetails {
-    margin: 1rem 0;
+    margin: 1em 0;
+    @media (min-width: 768px) {
+      margin-top: 0;
+      margin-bottom: 1em;
+    }
     p + p {
-      margin-top: 0.75rem;
+      margin-top: 0.75em;
     }
   }
   .MediaCarousel {
     margin-top: 1em;
+    @media (min-width: 768px) {
+      margin: 0;
+    }
     img {
       height: 200px;
+      @media (min-width: 768px) {
+        height: auto;
+      }
       width: 100%;
+    }
+    button {
+      @media (min-width: 768px) {
+        font-size: 1em;
+      }
     }
   }
 }
