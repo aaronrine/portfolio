@@ -1,92 +1,45 @@
+@import "../../colors";
+
 .Carousel {
-  margin-top: 1rem;
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  height: 200px;
-  img {
-    -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left
-          bottom, from(transparent), to(rgba(250, 250, 250, 0.5)));
-  }
-  .next {
-    transform: rotateY(-45deg);
-  }
-
-  .prev {
-    transform: rotateY(45deg);
-  }
-  .right.prev[data-rightanimate="1"] {
-    animation: rightRotateToActive 0.5s linear forwards;
-  }
-
-  .right.next[data-rightanimate="1"] {
-    animation: rightRotateNext 0.5s linear forwards;
-  }
-
-  .ProjectCard.active.right[data-rightanimate="1"] {
-    animation: rightRotateOffActive 0.5s linear forwards;
-  }
-  .left.prev[data-leftanimate="1"] {
-    animation: leftRotateToActive 0.5s linear forwards;
-  }
-  .left.next[data-leftanimate="1"] {
-    animation: leftRotateNext 0.5s linear forwards;
-  }
-
-  .ProjectCard.active.left[data-leftanimate="1"] {
-    animation: leftRotateOffActive 0.5s linear forwards;
-  }
-
-  @keyframes rightRotateOffActive {
-    0% {
-      transform: translateX(-130px) rotateY(45deg);
+  justify-content: center;
+  width: max-content;
+  color: $blue-gray;
+  margin-bottom: 2rem;
+  width: 100%;
+  overflow: hidden;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: inherit;
+    .wrapper {
+      overflow: hidden;
+      div {
+        overflow: hidden;
+        .ProjectCard {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          overflow: hidden;
+          a {
+            overflow: hidden;
+          }
+        }
+      }
     }
-    100% {
-      transform: translateX(0) rotateY(0);
-    }
-  }
-
-  @keyframes rightRotateNext {
-    0% {
-      transform: translateX(-130px);
-    }
-    100% {
-      transform: translateX(0) rotateY(-45deg);
-    }
-  }
-
-  @keyframes rightRotateToActive {
-    0% {
-      transform: translateX(-130px) rotateY(80deg);
-    }
-    100% {
-      transform: translateX(0) rotateY(45deg);
-    }
-  }
-  @keyframes leftRotateOffActive {
-    0% {
-      transform: translateX(130px) rotateY(-45deg);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  @keyframes leftRotateNext {
-    0% {
-      transform: translateX(130px) rotateY(-80deg);
-    }
-    100% {
-      transform: translateX(0) rotateY(-45deg);
-    }
-  }
-
-  @keyframes leftRotateToActive {
-    0% {
-      transform: translateX(130px);
-    }
-    100% {
-      transform: translateX(0) rotateY(45deg);
+    button {
+      height: 100%;
+      color: $blueWhite;
+      font-size: 1em;
+      padding: 0.35em 0.5em;
+      border: none;
+      border-radius: 0.5em;
+      outline: none;
+      background: $blue-gray;
     }
   }
 }
