@@ -28,12 +28,14 @@ export function ProjectDetails({ project }) {
     <main className="ProjectDetails">
       <h2 className="title">{project.name}</h2>
       <section className="primaryDetails">
-        <h4>What is this project?</h4>
-        <p className="desc">{project.desc}</p>
+        <div className="intro">
+          <h4>What is this project?</h4>
+          <p className="desc">{project.desc}</p>
+        </div>
         <ul className="techDetails">
           {project.tech.map((item, idx) => (
-            <div>
-              <li key={item !== "" ? item : idx}>{item}</li>
+            <div key={item !== "" ? item : idx}>
+              <li>{item}</li>
             </div>
           ))}
         </ul>

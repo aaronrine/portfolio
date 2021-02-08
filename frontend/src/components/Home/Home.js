@@ -1,6 +1,5 @@
 import { ProjectCarousel } from "../ProjectCarousel";
 import { getData } from "./getData";
-import profile from "../../assets/irlProfile-cropped.jpg";
 import "./Home.scss";
 export function Home() {
   const data = getData();
@@ -8,7 +7,6 @@ export function Home() {
     <main className="Home">
       <section className="bio">
         <article className="bioCard">
-          <img src={profile} alt="Aaron Rine" />
           <p>
             Websites hold a tremendous amount of power and it is my ambition to
             join the larger community of web developers in helping to give this
